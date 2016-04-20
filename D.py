@@ -6,7 +6,7 @@ f.close()
 B = ['x']*N
 
 for year in range(k):
-	A = list(map(int, input().split()))
+	A = list(map(int, f.readline.split()))
 	A = A[:N]
 	for i in range(N):
 		if B[i] == 'x' or A[i] < B[i]:
