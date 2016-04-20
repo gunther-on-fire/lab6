@@ -9,3 +9,5 @@ for i in range(len(A)):
 		break
 
 print(A[i], file=output)
+input.close()
+output.close()
