@@ -1,13 +1,12 @@
-input = open('input.txt', 'r')
-output = open('output.txt', 'w')
+f = open('input.txt', 'r')
 A = list(map(int, input.readline().split()))
+f.close()
 
 A.sort()
-for i in range(len(A)-1):
-	if A[i] == A[i+1]:
-		print(A[i])
-		break
+i = 1
+while A[i] != A[i - 1]:
+	i += 1
 
-print(A[i], file=output)
-input.close()
-output.close()
+f = open('output.txt', 'w')
+print(A[i-1], file=f)
+f.close()
