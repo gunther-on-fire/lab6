@@ -8,5 +8,5 @@ while A[i] != A[i - 1]:
 	i += 1
 
 f = open('output.txt', 'w')
-print(A[i-1], file=f)
+print(A[i], file=f)
 f.close()
