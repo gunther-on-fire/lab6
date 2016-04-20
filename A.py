@@ -1,5 +1,6 @@
 f = open('input.txt')
 
+f.readline()
 A = list(map(int, f.readline().split()))
 f.close()
 
