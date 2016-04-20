@@ -1,17 +1,16 @@
 f = open('input.txt')
-k = int(fin.readline())
-N = int(fin.readline())
-f.close()
+k = int(f.readline())
+N = int(f.readline())
 
 B = ['x']*N
 
 for year in range(k):
-	A = list(map(int, f.readline.split()))
-	A = A[:N]
+	A = list(map(int, f.readline().split()))
 	for i in range(N):
 		if B[i] == 'x' or A[i] < B[i]:
 			B[i] = A[i]
+f.close()
 
-f.open('output.txt', 'w')
+f = open('output.txt', 'w')
 print(B, file=f)
 f.close()
