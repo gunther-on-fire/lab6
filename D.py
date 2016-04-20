@@ -1,6 +1,5 @@
 f = open('input.txt')
-k = int(f.readline())
-N = int(f.readline())
+k, N = map(int, f.readline().split())
 
 B = ['x']*N
 
