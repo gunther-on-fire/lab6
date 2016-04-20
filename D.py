@@ -1,4 +1,4 @@
-
+'''
 f = open('input.txt')
 
 K, N = map(int, f.readline().split())
@@ -32,4 +32,3 @@ f.close()
 f = open('output.txt', 'w')
 print(B, file=f)
 f.close()
-'''
