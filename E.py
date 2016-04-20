@@ -1,16 +1,16 @@
-f = open('input.txt')
+fin = open('input.txt')
+N, K = fin.readline().split()
+gentleman_number = int(N)
+deals_number = int(K)
 
-N, k = map(int, f.readline().split())
+gentleman_balance = [0]*(gentleman_number + 1) # 0 is a fictive gentleman
 
-A = [0]*N
+for i in range(deals_number):
+    deal = fin.readline()
+    debitor, creditor, cash = [int(x) for x in deal.split()]
+    gentleman_balance[debitor] -= cash
+    gentleman_balance[creditor] += cash
 
-for i in range(k):
-	B = list(map(int,f.readline().split()))
-	A[(B[0] - 1)] -= B[2]
-	A[(B[1] - 1)] += B[2]
-
-f.close()
-
-f = open('output.txt', 'w')
-print(A, file=f)
-f.close()
+fout = open('output.txt', 'w')
+print(*gentleman_balance[1:], file = fout)
+fout.close()
