@@ -20,12 +20,12 @@ f.close()
 f = open('input.txt')
 k, N = map(int, f.readline().split())
 
-B = ['x']*N
+B = [0]*N
 
 for year in range(k):
 	A = list(map(int, f.readline().split()))
 	for i in range(N):
-		if B[i] == 'x' or A[i] < B[i]:
+		if B[i] == 0 or A[i] < B[i]:
 			B[i] = A[i]
 f.close()
 
