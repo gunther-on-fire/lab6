@@ -4,7 +4,7 @@ A = list(map(int, input.readline().split()))
 
 A.sort()
 for i in range(len(A)):
-	if A[i] == A[i+1]:
+	if A[i+1] == A[i]:
 		print(A[i])
 		break
 
