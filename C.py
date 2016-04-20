@@ -1,3 +1,5 @@
+
+'''
 f = open('input.txt')
 
 N = int(f.readline())
@@ -22,6 +24,8 @@ f.close()
 
 '''
 f = open('input.txt')
+
+N = int(f.readline())
 A = list(map(int, f.readline().split()))
 f.close()
 
@@ -40,4 +44,3 @@ for i in range(N):
 f = open('output.txt', 'w')
 print(0 if min_dist == N else min_dist, file=f)
 f.close()
-'''
